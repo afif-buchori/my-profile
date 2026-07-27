@@ -91,9 +91,11 @@ export default async function Home() {
                     </div>
                     <div className="flex gap-4 justify-center items-center">
                         {socialMedia.map((item, idx) => (
-                            <Button key={idx} className="w-9 h-9 p-0">
-                                <Image src={colorIcons[item.ico]} alt="logo-cake" width={24} height={24} />
-                            </Button>
+                            <a key={idx} href={item.urlLink} target="_blank" rel="noopener noreferrer">
+                                <Button className="w-9 h-9 p-0">
+                                    <Image src={colorIcons[item.ico]} alt="logo-cake" width={24} height={24} />
+                                </Button>
+                            </a>
                         ))}
                     </div>
                 </div>
